@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class demo3 {
 
+	private static Scanner scanner;
+
 	public static void main(String[] args) {
 		thucHienTinhTong();
 		thucHienTinhTru();
@@ -13,7 +15,7 @@ public class demo3 {
 		
 		int a ,b;
 		
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		System.out.println("Nhap so a");
 		a = scanner.nextInt();
 		System.out.println("Nhap so b");
@@ -27,7 +29,7 @@ public class demo3 {
 	
 	public static void thucHienTinhTru() {
 		int a ,b;
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		System.out.println("Nhap so a");
 		a = scanner.nextInt();
 		System.out.println("Nhap so b");
