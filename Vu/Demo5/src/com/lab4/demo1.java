@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class demo1 {
 
 	public static void main(String[] args) {
-		int n , sum = 0 ;
+		int n , sum = 0 ,temp;
 		Scanner scanner = new Scanner(System.in);
 		
 		do {
@@ -34,5 +34,25 @@ public class demo1 {
 			sum += arry[i];
 		}
 		System.out.println("Tổng các phần tử trong mảng :"+sum);
+		
+		// sắp xếp theo thứ tự giảm dần
+	    for (int i = 0; i < n - 1; i++) {
+	        for (int j = i + 1; j <= n - 1; j++) {
+	            if (arry[i] < arry[j]) {
+	                temp = arry[i];
+	                arry[i] = arry[j];
+	                arry[j] = temp;
+	            }
+	        }
+	    }
+	    System.out.println("Mảng sau khi sắp xếp là: ");
+	    for (int i = 0; i < n; i++) {
+	        System.out.print(arry[i] + "\t");
+	    }
+	         
+	    // tìm phần tử nhỏ nhất
+	    // sau khi sắp xếp theo thứ tự giảm dần 
+	    // thì phần tử nhỏ nhất là phần tử cuối cùng trong mảng
+	    System.out.println("\nPhần tử nhỏ nhất trong mảng là " + arry[n - 1]);
 	}
 }
