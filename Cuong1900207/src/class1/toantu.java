@@ -17,6 +17,7 @@ public class toantu {
 		b = scanner.nextInt();
 		
 		tong=a + b;
+		
 		System.out.println("Tong 2 so la: " + tong);
 		System.out.println("Binh phuong tong la: " + Math.pow(tong,2));
 		System.out.println("can bac 2 tong la: " + Math.sqrt(tong));

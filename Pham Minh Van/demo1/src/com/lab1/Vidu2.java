@@ -8,6 +8,7 @@ public class Vidu2 {
 		int b;
 		
 		
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Nhap so a: ");
@@ -20,7 +21,8 @@ public class Vidu2 {
 		
 		System.out.println("Tong : " + c);
 		System.out.println("A luy thua b : " + Math.pow(a, b));
-		System.out.println("Can bac hai cua Tong (a+b) :" + Math.sqrt(c));
+		double kq = Math.sqrt(c);
+		System.out.printf("tong cua (a+b): %.4f",kq);
 		
 	}
 }
