@@ -1,8 +1,8 @@
-package com.lab1;
+package com.lab2;
 
 import java.util.Scanner;
 
-public class Lab1Bai4 {
+public class Lab2Bai2 {
 	public static void main(String[] args) {
 		float a;
 		float b;
