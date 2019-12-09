@@ -8,6 +8,7 @@ public class Vidu2 {
 		int b;
 		
 		
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Nhap so a: ");
