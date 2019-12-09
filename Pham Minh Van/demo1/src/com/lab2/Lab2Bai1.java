@@ -3,43 +3,38 @@ package com.lab2;
 import java.util.Scanner;
 
 public class Lab2Bai1 {
-
 	public static void main(String[] args) {
-		int cu;
-		int moi;
 		
+		int a;
+		int b;
 		
+		System.out.println("Phương trình bậc nhất có dạng: ax + b = 0");
 		
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Nhập chỉ số điện cũ:");
-		cu = scanner.nextInt();
+		System.out.println("Nhập hệ số a: ");
+		a = scanner.nextInt();
+		System.out.println("Nhập hệ số b: ");
+		b = scanner.nextInt();
 		
-		System.out.println("Nhập chỉ số điện mới:");
-		moi = scanner.nextInt();
-		int tong = moi - cu;
-		if(moi < cu) {
-			System.out.println("chỉ số mới nhập sai !!!! ");
+		int x = -b/a;
+		
+		if (a==0) {
+			if(b==0) {
+				System.out.println("Phương trình có vô số nghiệm ! \n");
+			} else {
+				System.out.println("Phương trình vô nghiệm ! \n");
+			}
 		} else {
-			
-			System.out.println("chỉ số điện tổng cần thanh toán: \n" + tong);
+			System.out.println("Phương trình có nghiệm = \n" + x);
 		}
 		
 		
-		if(tong <= 100) {
-			tong = tong*1000;
-		} else if (101 <= tong && tong <= 150 ) {
-			tong = (100*1000)+(tong-100)*1200;
-		} else if (151 <= tong && tong <= 200) {
-			tong = (100*1000)+(50*1200)+(tong-150)*2000;
-		}else if (tong > 200) {
-			tong = (100*1000)+(50*1200)+(150*2000)+(tong-200)*2500;
-		}
 		
 		
-
-		System.out.println("Tổng tiền cần thanh toán: \n" + tong + "đồng");
+		
+		
 		
 		
 	}
