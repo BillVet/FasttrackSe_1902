@@ -61,8 +61,7 @@ public class Lab2Bai4 {
 		
 		
 	}
-	
-public static void phuongTrinhBac2() {
+	public static void phuongTrinhBac2() {
 	float a;
 	float b;
 	float c;
@@ -102,10 +101,13 @@ public static void phuongTrinhBac2() {
 } else if(delta < 0) {
 	System.out.println("phuong trinh vo nghiem");
 }
-	
-	
+
+
 }
-public static void tinhTienDien() {
+	
+	
+	public static void tinhTienDien() {
+	
 	int number;
 	
 	
@@ -127,6 +129,8 @@ public static void tinhTienDien() {
 	
 
 	System.out.println("Tổng tiền cần thanh toán: \n" + number + "đồng");
+	
+	
 }
 
 }
