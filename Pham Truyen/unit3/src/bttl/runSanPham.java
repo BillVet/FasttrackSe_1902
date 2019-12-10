@@ -14,5 +14,6 @@ public class runSanPham {
 		sp1.xuat();
 		sp2.nhap();
 		sp2.xuat();
+		
 	}
 }

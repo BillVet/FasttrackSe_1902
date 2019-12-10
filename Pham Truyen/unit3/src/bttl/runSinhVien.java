@@ -20,5 +20,6 @@ public class runSinhVien {
 		sv.setDiem(8);
 		sv.xuat();
 		sv.xepLoai();
+		
 	}
 }

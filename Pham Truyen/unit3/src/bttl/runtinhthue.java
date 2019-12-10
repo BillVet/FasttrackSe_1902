@@ -7,5 +7,6 @@ public class runtinhthue {
 		tinhThue.nhap();
 		tinhThue.getThueNhapKhau();
 		tinhThue.xuat();
+		
 	}
 }
