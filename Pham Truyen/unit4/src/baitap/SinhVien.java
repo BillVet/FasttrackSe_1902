@@ -11,22 +11,25 @@ abstract public class SinhVien {
 		this.nganh = nganh;
 	}
 
-	abstract public double getDiem();
+	abstract public double getDiemTrungBinh();
 	
 	public String getHocLuc() {
-		if(getDiem() < 5) {
-			return "khong dat";
-		}else {
-			return "dat";
+		double diemTrungBinh = getDiemTrungBinh();
+		if(diemTrungBinh<5) {
+			return "Hoc luc yeu";
+		}else if(5<=diemTrungBinh && diemTrungBinh<6.5) {
+			return "Hoc luc trung binh";
+		}else if(6.5<=diemTrungBinh && diemTrungBinh<7.5) {
+			return "Hoc luc kha";
+		}else if(7.5<=diemTrungBinh && diemTrungBinh<9) {
+			return "Hoc luc gioi";
+		}else{
+			return "Hoc luc xuat sac";
 		}
 	}
 	
 	public void xuat() {
-		System.out.println("Ho ten: " + hoTen + "\n Nganh: "+ nganh +"\n Diem: "+ getDiem() + "\n Hoc luc: "+ getHocLuc());
-	}
-
-	public static void add(SinhVien it) {
-		
+		System.out.println("Ho ten: " + hoTen + "\n Nganh: "+ nganh +"\n Diem: "+ getDiemTrungBinh() + "\n Hoc luc: "+ getHocLuc());
 	}
 }
 
