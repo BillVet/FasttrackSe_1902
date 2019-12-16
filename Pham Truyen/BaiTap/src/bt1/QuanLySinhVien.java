@@ -82,31 +82,24 @@ public class QuanLySinhVien {
 	}
 	
 	public void themSinhVien() {
-		int id;
-		String name;
-		int age;
-		String address;
-		double gpa;
-		
-		ArrayList<SinhVien> data = new ArrayList<SinhVien>();
+		if(size == MAX_LENGTH) {
+			System.out.println("");
+			return;
+		}
 		
 		SinhVien sv = new SinhVien();
 		System.out.println("Nhap ID: ");
-		id = scanner.nextInt();
+		sv.setId(Integer.parseInt(scanner.nextLine()));
 		System.out.println("Nhap ten: ");
-		name = scanner.nextLine();
+		sv.setId(Integer.parseInt(scanner.nextLine()));
 		System.out.println("Nhap tuoi: ");
-		age = scanner.nextInt();
+		sv.setId(Integer.parseInt(scanner.nextLine()));
 		System.out.println("Nhap dia chi: ");
-		address = scanner.nextLine();
+		sv.setId(Integer.parseInt(scanner.nextLine()));
 		System.out.println("Nhap diem trung binh: ");
-		gpa = scanner.nextDouble();
-		sv.setId(id);
-		sv.setName(name);
-		sv.setAge(age);
-		sv.setAddress(address);
-		sv.setGpa(gpa);
-		data.add(sv);
+		sv.setId(Integer.parseInt(scanner.nextLine()));
+		
+		sinhVienArray[size++] = sv;
 	}
 	
 }
