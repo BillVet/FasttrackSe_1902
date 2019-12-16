@@ -17,8 +17,8 @@ public class QuanLyKhachHang {
 	
 		while(true) {
 			System.out.println("---------------------------------------------");
-			System.out.println("-1.Them sinh vien                       	 ");
-			System.out.println("-2.Xuat thong tinh danh sach sinh vien       ");
+			System.out.println("-1.Them khach hang                       	 ");
+			System.out.println("-2.Xuat thong tinh khach hang                ");
 			System.out.println("-3.Ket thuc                                  ");
 			System.out.println("---------------------------------------------");
 
@@ -38,7 +38,9 @@ public class QuanLyKhachHang {
 				scanner.close();
 				System.exit(0);
 				break;
-
+			default:
+				System.out.println("Menu khong ton tai");
+				break;
 			}
 			
 		}
