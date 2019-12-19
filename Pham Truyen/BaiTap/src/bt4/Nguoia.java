@@ -2,18 +2,18 @@ package bt4;
 
 import java.util.Scanner;
 
-public class Nguoi {
+public class Nguoia {
 
 	private String hoTen;
-	private String ngaySinh;
+	public String ngaySinh;
 	private String soCMND;
-	private Scanner scanner;
+	protected Scanner scanner;
 	
-	public Nguoi() {
+	public Nguoia() {
 		super();
 	}
 	
-	public Nguoi(String hoTen, String ngaySinh, int cmnd, String soCMND) {
+	public Nguoia(String hoTen, String ngaySinh, int cmnd, String soCMND) {
 		super();
 		this.hoTen = hoTen;
 		this.ngaySinh = ngaySinh;
