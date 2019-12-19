@@ -6,15 +6,16 @@ public class HSHocSinh extends Nguoi{
 
 	public String lop, khoaHoc;
 	public int ki;
+	
 	public HSHocSinh() {
 		super();
 		
 	}
 	
 	
-	
 	void nhap() {
 		Scanner scanner = new Scanner(System.in);
+		
 		System.out.println("Nhập tên học sinh: ");
 		this.name = scanner.nextLine();
 		

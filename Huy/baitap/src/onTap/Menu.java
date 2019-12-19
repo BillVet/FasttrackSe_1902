@@ -15,12 +15,11 @@ public class Menu {
 		do {
 
 			System.out.println("MENU");
-			System.out.println("1. Nhap danh sach ho va ten");
-			System.out.println("2. Xuat danh sach vua nhap");
-			System.out.println("3. Xuat ngau nhien danh sach vua nhap");
-			System.out.println("4. Sap xep giam dan va xuat danh sach");
-			System.out.println("5. Tim va xoa ho ten tu bam phim");
-			System.out.println("6. exit");
+			System.out.println("1. Nhập danh sách học sinh");
+			System.out.println("2. Hiển thị toàn bộ danh sách");
+			System.out.println("3. Hiển thị học sinh sinh năm 1985 và ở Thái Nguyên");
+			System.out.println("4. Hiển thị tất cả học sinh lớp 10A1");
+			System.out.println("5. exit");
 			System.out.println("-------------------------------------------");
 
 			int choose = scanner.nextInt();
@@ -36,6 +35,8 @@ public class Menu {
 				find1();
 			case 4:
 				find2();
+			case 5:
+				System.exit(0);
 			default:
 				break;		
 			}
@@ -57,6 +58,7 @@ public class Menu {
 		for(HSHocSinh hs :arr) {
 			hs.xuat();
 		}
+		
 		System.out.println("\n");
 		System.out.println("-------------------------------");
 	}
