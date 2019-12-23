@@ -16,8 +16,15 @@ public class SinhVienIT extends SinhVien{
 		this.html = html;
 		this.css = css;
 	}
+	
+	public void xuat() {
+		super.xuat();
+		System.out.println("Diem Css :"+java);
+		System.out.println("Diem Java :"+html);
+		System.out.println("Diem Html :"+css);
+	}
 
-	public double getDiem() {
+	public double getDiemTrungBinh() {
 		return (2*java + html + css)/4;
 	}
 }
