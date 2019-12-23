@@ -86,6 +86,7 @@ public class Menu {
 	public void sapxep() {
 		Collections.sort(sv);
 		Collections.reverse(sv);
+		xuat();
 	}
 
 	public void xoa() {
