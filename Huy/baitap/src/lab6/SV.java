@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class SV {
 	String hoten;
 	double tb;
+	public String name;
 	
 	public String getHoten() {
 		return hoten;
