@@ -81,6 +81,12 @@ public class QuanLy {
 	}
 	
 	public void tim() {
-		
+		System.out.println("\nNhap thong tin can tim: ");
+	    String tim = scanner.nextLine();
+	    for (int i = 0; i < pt.size(); i++) {
+	        if (pt.get(i).getMau().equalsIgnoreCase(tim)) {
+	            pt.remove(i);
+	        }
+        }
 	}
 }

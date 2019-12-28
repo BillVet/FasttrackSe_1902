@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class arraylistSV {
-	SV sv = new SV();
+	SV sv;
 	ArrayList<SV> arr = new ArrayList<>();
 	Scanner scanner = new Scanner(System.in);
 	 
@@ -60,7 +60,7 @@ public class arraylistSV {
 		System.out.println("Nhap so sinh vien can them:");
 		int n = scanner.nextInt();
 		for(int i = 0 ; i < n ; i++) {
-			SV sv = new SV();
+			 sv = new SV();
 			sv.nhap();
 			arr.add(sv);	
 		}
