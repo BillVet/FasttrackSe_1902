@@ -83,7 +83,7 @@ public class QuanLy {
 		
 		for(int i = 0; i < n; i++) {
 			nhanVien = new NhanVien();
-			System.out.println("Nhap thong tin nhan vien thu: " + (i+1));
+			System.out.println("Nhap thong tin nhan vien thu: " + (i+1) + " : ");
 			if("1".equals(loai)) {
 				NhanVien nhanVien1 = new NhanVien();
 				nhanVien1.nhap();
@@ -96,7 +96,7 @@ public class QuanLy {
 			}else {
 				System.out.println("Ban chon sai roi!");
 			}
-			nv.add(nhanVien);
+            nv.add(nhanVien);
 		}
 	}
 	
