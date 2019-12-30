@@ -17,7 +17,7 @@ public class QuanLyNhanVien {
 			System.out.println("5.Xoa thong tin quan ly theo ten        ");
 			System.out.println("6.Tinh tong luong cua nhan vien quan ly ");
 			System.out.println("7.Sap xep danh sach nhan vien bao ve    ");
-			System.out.println("8.Ket thuc!                             ");
+			System.out.println("0.Ket thuc!                             ");
 			
 			System.out.println("------Lua chon menu------");
 			String chon = sc.nextLine();
@@ -44,7 +44,7 @@ public class QuanLyNhanVien {
 			case "7":
 				sxDsBv();
 				break;
-			case "8":
+			case "0":
 				sc.close();
 				System.exit(0);
 				break;
@@ -57,30 +57,26 @@ public class QuanLyNhanVien {
 	
 	NhanVien nhanvien;
 	int n;
-	ArrayList<NhanVien> nv = new ArrayList<>();
+	ArrayList<NhanVien> nv = new ArrayList<NhanVien>();
 
 	private void nhap() {
-		System.out.println("Nhap so luong nhan vien can nhap: ");
-		n = Integer.parseInt(sc.nextLine());
+		System.out.println("Nhap ");
 		
 		System.out.println("Chon nhan vien: ");
 		System.out.println("1.Quan ly");
 		System.out.println("2.Bao ve");
-		String loai = sc.nextLine();
+		int loai = sc.nextInt();
 		
-		for(int i = 0; i < nv.size(); i++) {
-	        System.out.println("\nThong tin nhan vien thu " + (i+1) + ": ");
-	        if("1".equals(loai)) {
-	        	QuanLy quanly = new QuanLy();
-	        	quanly.nhap();
-	        }else if("2".equals(loai)) {
-	        	BaoVe baove = new BaoVe();
-	        	baove.nhap();
-	        }else {
-	        	System.out.println("Ban chon sao roi!");
-	        }
+		if(loai == 1) {
+			nhanvien = new QuanLy();
+			nhanvien.nhap();
+			nv.add(nhanvien);
+		}else {
+			nhanvien = new BaoVe();
+			nhanvien.nhap();
 			nv.add(nhanvien);
 		}
+	
 	}
 
 	private void xuat() {
