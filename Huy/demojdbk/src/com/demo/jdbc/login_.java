@@ -26,6 +26,7 @@ public class login_ {
 				ResultSet rs = ps.executeQuery();
 				if(rs.next()) {
 					System.out.println("Login thanh cong");
+					
 					System.out.println("-------------");
 					if(rs.getString(3).equals("CB")) {
 						ps = con.prepareStatement("select `HoTen` from thongtin where  username=?");
@@ -97,7 +98,7 @@ public class login_ {
 	}
 
 	private void delete() {
-		String afh= sc.nextLine();
+		
 		System.out.println("Nhập mã của sinh viên cần xóa: ");
 		String maSV = sc.nextLine();
 
