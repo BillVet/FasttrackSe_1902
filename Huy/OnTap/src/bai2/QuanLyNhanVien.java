@@ -92,12 +92,7 @@ public class QuanLyNhanVien {
 	}
 
 	private void find() {
-		for(NhanVien x: arr) {
-			if(x.ViTri=="Bao Ve") {
-				x.xuat();
-			}
-		}
-
+	
 	}
 
 
