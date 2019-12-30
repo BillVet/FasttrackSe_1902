@@ -60,7 +60,8 @@ public class QuanLyNhanVien {
 	ArrayList<NhanVien> nv = new ArrayList<NhanVien>();
 
 	private void nhap() {
-		System.out.println("Nhap ");
+		System.out.println("Nhap so luong nhan vien: ");
+		n = Integer.parseInt(sc.nextLine());
 		
 		System.out.println("Chon nhan vien: ");
 		System.out.println("1.Quan ly");
