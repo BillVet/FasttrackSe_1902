@@ -51,8 +51,7 @@ public class NhanVien {
 	
 	public void xuat() {
 		Nguoi nguoi = new Nguoi();
-		System.out.println("Ho ten: "+hoTen);
-		System.out.println("Tuoi: "+nguoi.tinhTuoi());
+		nguoi.xuatTenTuoi();
 		System.out.println("Luong: "+luong);
 	}
 }
