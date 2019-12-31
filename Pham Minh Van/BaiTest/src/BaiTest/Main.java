@@ -9,12 +9,10 @@ import java.util.Scanner;
 
 
 
-
-
 public class Main {
+	static String input;
 	
-	@SuppressWarnings("unused")
-	public static Scanner scanner = new Scanner(System.in);
+	private static Scanner scanner = new Scanner(System.in);
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		String id = null;
@@ -26,15 +24,8 @@ public class Main {
 		double thue;
 		
 		ArrayList<NVHanhChinh> list = new ArrayList<NVHanhChinh>();
-	
-		NVTiepThi nvtt = new NVTiepThi();
-		NVHanhChinh nvhc = new NVHanhChinh();
-		TruongPhong tp = new TruongPhong();
 		
 		String input;
-		input = scanner.nextLine();
-		
-		
 		while(true) {
 		System.out.println("/****************************************/");
 		System.out.println("1.  Nhập vào danh sách nhân viên");
@@ -49,6 +40,7 @@ public class Main {
 		System.out.println("0.  Kết thúc ");
 		System.out.println("/****************************************/");
 		String x = scanner.nextLine();
+		
 		switch (x) {
 		
 		case "1":
@@ -58,50 +50,48 @@ public class Main {
             String y = scanner.nextLine();
             switch (y) {
             case "1": 
+            		 NVHanhChinh nvhc = new NVHanhChinh();
                 	 System.out.print("Nhập mã nhân viên: ");
-                     nvhc.id = scanner.nextLine();
+                     nvhc.setid(scanner.nextLine());
                      System.out.print("Nhập họ tên:");
-                     nvhc.ten = scanner.nextLine();
+                     nvhc.setten(scanner.nextLine());
                      System.out.print("Nhập lương: ");
-                     nvhc.luong = scanner.nextDouble();
-                     tongLuong(luong);
-                     luong = Double.parseDouble(scanner.nextLine());
-             		
-             		 nvhc = new NVHanhChinh(ten, id, luong);
+                     nvhc.setluong(scanner.nextDouble());
                      list.add(nvhc);
                      break;
                      
 
                  
                  case "2":
+                	 TruongPhong tp = new TruongPhong();
                 	 System.out.print("Nhập mã nhân viên: ");
-                     id = scanner.nextLine();
+                     tp.setid(scanner.nextLine());
                      System.out.print("Nhập họ tên:");
-                     ten = scanner.nextLine();
+                     tp.setten(scanner.nextLine());
                      System.out.print("Nhập lương: ");
-                     luong = scanner.nextDouble();
+                     tp.luong = scanner.nextDouble();
                      System.out.print("Nhập lương trách nhiệm: ");
-                     luongTN = scanner.nextDouble();
-                     double tongLuong= luong + doanhSo + hoaHong;
-             		 tongLuong(tongLuong);
-             		 nvhc = new NVTiepThi(id, ten, tongLuong(tongLuong), hoaHong, doanhSo);
-                     list.add(nvhc);
+                     tp.luongTN = scanner.nextDouble();
+                     double tinhThue= luong + doanhSo + hoaHong;
+             		 tinhThue(tinhThue);;
+                     list.add(tp);
                      break;
                  case "3":
+                	 NVTiepThi nvtt = new NVTiepThi();
                 	 System.out.print("Nhập mã nhân viên: ");
-                     id = scanner.nextLine();
+                	 nvtt.id = scanner.nextLine();
                      System.out.print("Nhập họ tên:");
-                     ten = scanner.nextLine();
+                     nvtt.ten = scanner.nextLine();
                      System.out.print("Nhập lương: ");
-                     luong = scanner.nextDouble();
+                     nvtt.luong = scanner.nextDouble();
                      System.out.print("Nhập doanh số bán hàng: ");
-                     doanhSo = scanner.nextDouble();
+                     nvtt.doanhSo = scanner.nextDouble();
                      System.out.print("Nhập tỉ lệ hoa hồng: ");
-                     hoaHong = scanner.nextDouble();
+                     nvtt.hoaHong = scanner.nextDouble();
                      
-                    tongLuong= luong + luongTN;
-             		tongLuong(tongLuong);
-             		nvhc = new TruongPhong(id, ten, tongLuong(tongLuong), luongTN, tongLuong, tongLuong);
+                    tinhThue= luong + luongTN;
+             		tinhThue(tinhThue);
+             		nvhc = new TruongPhong(id, ten, tinhThue(tinhThue), luongTN, tinhThue, tinhThue);
                      list.add(nvhc);
                      break;
             
@@ -113,6 +103,7 @@ public class Main {
 			}	
 			break;
 		case "3":
+			input = scanner.nextLine();
 			for (int i=0;i<list.size();i++) {
 				if (input.equalsIgnoreCase(list.get(i).id)) {
 					list.get(i).showNV();
@@ -120,6 +111,7 @@ public class Main {
 			}
 			break;
 		case "4":
+			input = scanner.nextLine();
 			for (int i=0;i<list.size();i++) {
 				if (input.equalsIgnoreCase(list.get(i).id)) {
 					list.remove(i);
@@ -128,7 +120,7 @@ public class Main {
 			break;
 		case "5":
 			System.out.println("Nhập id nhân viên cần cập nhật: ");
-			
+			input = scanner.nextLine();
 			for (int i=0;i<list.size();i++) {
 				if (input.equalsIgnoreCase(list.get(i).id)) {
 					System.out.println("Nhập họ và tên nhân viên: ");
@@ -185,7 +177,7 @@ public class Main {
 	}	
 	///////////////////// NGOÀI MAIN
 	
-	public static double tongLuong(double luong) {
+	private static double tinhThue(double luong) {
 		double thue;
 		if (luong < 9000000) {
 			thue = 0;
@@ -199,6 +191,7 @@ public class Main {
 		}
 	}
 }
+
 
 
 		
