@@ -10,11 +10,10 @@ public class NVHanhChinh {
 	double thue;
 	Scanner scanner = new Scanner(System.in);
 	public NVHanhChinh() {
-		super();
+		
 	}
 	
 	public NVHanhChinh(String id, String ten, double luong) {
-		super();
 		this.id = id;
 		this.ten = ten;
 		this.luong = luong;

@@ -19,7 +19,7 @@ public class TruongPhong extends NVHanhChinh{
 	        return luongTN;
 	    }
 
-	    public void setluongTN(double luongTN) {
+	    public void setluongTN(double luongTN) { 
 	        this.luongTN = luongTN;
 	    }
 	public String getid() {

@@ -1,6 +1,8 @@
 package Bai2;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class QuanLyNhanVien {
@@ -60,7 +62,8 @@ public class QuanLyNhanVien {
 	ArrayList<NhanVien> nv = new ArrayList<NhanVien>();
 
 	private void nhap() {
-		System.out.println("Nhap ");
+		System.out.println("Nhap so luong nhan vien: ");
+		n = Integer.parseInt(sc.nextLine());
 		
 		System.out.println("Chon nhan vien: ");
 		System.out.println("1.Quan ly");
@@ -83,28 +86,69 @@ public class QuanLyNhanVien {
 		nhanvien.xuat();
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	private void slNvQl() {
-		// TODO Auto-generated method stub
-		
+		int dem = 0;
+		for(int i = 0; i < nv.size(); i++) {
+			if(nv.get(i).equals("Quan ly")) {
+				dem++;
+			}
+		}
+		System.out.println("So luong nhan vien quan ly la: "+dem);
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	private void dsBvCaSang() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Danh sach bao ve truc ca sang: ");
+		for(int i=0; i < nv.size(); i++) {
+			if(nv.get(i).equals("Sang")) {
+				nv.get(i).xuat();
+			}
+		}
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	private void xoaQuanLy() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Nhap ten quan ly can xoa: ");
+		for(int i = 0; i < nv.size(); i++) {
+			String ten = sc.nextLine();
+			if(nv.get(i).equals(ten)){
+				nv.remove(i);
+			}
+		}
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	private void luongQuanLy() {
-		// TODO Auto-generated method stub
-		
+		int dem=0;
+		for(int i=0; i < nv.size(); i++) {
+			if(nv.get(i).equals("Quan ly")) {
+				dem+= nv.get(i).luong;
+			}
+		}
+		System.out.println("Tong luong cua nhan vien quan ly : " + dem);
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	private void sxDsBv() {
-		// TODO Auto-generated method stub
-		
+		Collections.sort(nv, new Comparator<NhanVien>() {
+			 @Override
+	            public int compare(NhanVien o1, NhanVien o2) {
+	                if (o1.luong < o2.luong) {
+	                    return 1;
+	                } else {
+	                    if (o1.luong == o2.luong) {
+	                        return 0;
+	                    } else {
+	                        return -1;
+	                    }
+	                }
+	            }
+	        });
+		for (int i = 0; i < nv.size(); i++) {
+			if(nv.get(i).equals("Bao ve")) {
+				nv.get(i).xuat();
+			}
+		}
 	}
 }
