@@ -44,14 +44,14 @@ public class NhanVien {
 		System.out.println("Nhap ho ten nhan vien: ");
 		hoTen = sc.nextLine();
 		System.out.println("Nhap luong: ");
-		luong = sc.nextDouble();
+		luong = Double.parseDouble(sc.nextLine());
 		System.out.println("Nhap nam sinh: ");
-		namSinh = sc.nextInt();
+		namSinh = Integer.parseInt(sc.nextLine());
 	}
 	
 	public void xuat() {
-		Nguoi nguoi = new Nguoi();
-		nguoi.xuatTenTuoi();
+		System.out.println("Ho ten: "+hoTen);
+		System.out.println("Nam sinh: "+namSinh);
 		System.out.println("Luong: "+luong);
 	}
 }
