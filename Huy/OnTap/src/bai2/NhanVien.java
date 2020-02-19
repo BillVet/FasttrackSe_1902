@@ -50,6 +50,7 @@ public class NhanVien implements Nguoi {
 	public String xuatTenTuoi() {
 		return tenTuoi ="> Họ tên:"+hoTen+" Tuổi:"+tinhTuoi()+" Lương:"+luong;
 	}
+	
 	public void nhap() {
 		System.out.println("Nhập tên:");
 		this.hoTen= scanner.nextLine();
