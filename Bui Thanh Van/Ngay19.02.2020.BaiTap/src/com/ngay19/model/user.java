@@ -43,6 +43,9 @@ public class user {
 	public void setRole(int role) {
 		this.role = role;
 	}
+	public user() {
+		super();
+	}
 
 	
 }

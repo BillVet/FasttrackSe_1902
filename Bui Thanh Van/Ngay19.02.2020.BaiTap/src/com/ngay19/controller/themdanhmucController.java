@@ -35,12 +35,9 @@ public class themdanhmucController extends HttpServlet{
 		String category_name = req.getParameter("category_name");
 
 		categories categories = new categories();
-		categories.setCategory_id(Integer.parseInt(category_id));;
+		categories.setCategory_id(Integer.parseInt(category_id));
 		categories.setCategory_name(category_name);
-		int record = themDanhMucDao.themDanhMuc(categories);
-//		if(record==1) {
-//			req.setAttribute("NOTE", "Ban da dang ky thanh cong");
-//		}
+		themDanhMucDao.themDanhMuc(categories);
 //		RequestDispatcher requestDispatcher = req.getRequestDispatcher("/DangNhap.jsp");
 //		requestDispatcher.forward(req, resp);
 	}

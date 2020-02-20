@@ -35,7 +35,7 @@ public class dangnhapController extends HttpServlet{
 		user.setPassword(password);
 		int record = dangNhapDao.dangnhapUser(user);
 		if(record == 1) {
-			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/GiaoDienAdmin.jsp");
+			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/hienthinhanvien");
 			requestDispatcher.forward(req, resp);
 		} else {
 			req.setAttribute("NOTE1", "Vui lòng kiểm tra lại!");

@@ -15,5 +15,13 @@ public String getCategory_name() {
 public void setCategory_name(String category_name) {
 	this.category_name = category_name;
 }
- 
+public categories() {
+	super();
+}
+public categories(int category_id, String category_name) {
+	super();
+	this.category_id = category_id;
+	this.category_name = category_name;
+}
+
 }
