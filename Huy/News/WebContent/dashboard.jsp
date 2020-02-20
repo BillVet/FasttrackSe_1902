@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -114,133 +116,9 @@
 						</ul></li>
 					<!--END MESSAGES SECTION -->
 
-					<!--TASK SECTION -->
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#"> <span
-							class="label label-danger">5</span> <i class="icon-tasks"></i>&nbsp;
-							<i class="icon-chevron-down"></i>
-					</a>
 
-						<ul class="dropdown-menu dropdown-tasks">
-							<li><a href="#">
-									<div>
-										<p>
-											<strong> Profile </strong> <span
-												class="pull-right text-muted">40% Complete</span>
-										</p>
-										<div class="progress progress-striped active">
-											<div class="progress-bar progress-bar-success"
-												role="progressbar" aria-valuenow="40" aria-valuemin="0"
-												aria-valuemax="100" style="width: 40%">
-												<span class="sr-only">40% Complete (success)</span>
-											</div>
-										</div>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-									<div>
-										<p>
-											<strong> Pending Tasks </strong> <span
-												class="pull-right text-muted">20% Complete</span>
-										</p>
-										<div class="progress progress-striped active">
-											<div class="progress-bar progress-bar-info"
-												role="progressbar" aria-valuenow="20" aria-valuemin="0"
-												aria-valuemax="100" style="width: 20%">
-												<span class="sr-only">20% Complete</span>
-											</div>
-										</div>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-									<div>
-										<p>
-											<strong> Work Completed </strong> <span
-												class="pull-right text-muted">60% Complete</span>
-										</p>
-										<div class="progress progress-striped active">
-											<div class="progress-bar progress-bar-warning"
-												role="progressbar" aria-valuenow="60" aria-valuemin="0"
-												aria-valuemax="100" style="width: 60%">
-												<span class="sr-only">60% Complete (warning)</span>
-											</div>
-										</div>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-									<div>
-										<p>
-											<strong> Summary </strong> <span
-												class="pull-right text-muted">80% Complete</span>
-										</p>
-										<div class="progress progress-striped active">
-											<div class="progress-bar progress-bar-danger"
-												role="progressbar" aria-valuenow="80" aria-valuemin="0"
-												aria-valuemax="100" style="width: 80%">
-												<span class="sr-only">80% Complete (danger)</span>
-											</div>
-										</div>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a class="text-center" href="#"> <strong>See
-										All Tasks</strong> <i class="icon-angle-right"></i>
-							</a></li>
-						</ul></li>
-					<!--END TASK SECTION -->
 
-					<!--ALERTS SECTION -->
-					<li class="chat-panel dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#"> <span
-							class="label label-info">8</span> <i class="icon-comments"></i>&nbsp;
-							<i class="icon-chevron-down"></i>
-					</a>
 
-						<ul class="dropdown-menu dropdown-alerts">
-
-							<li><a href="#">
-									<div>
-										<i class="icon-comment"></i> New Comment <span
-											class="pull-right text-muted small"> 4 minutes ago</span>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-									<div>
-										<i class="icon-twitter info"></i> 3 New Follower <span
-											class="pull-right text-muted small"> 9 minutes ago</span>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-									<div>
-										<i class="icon-envelope"></i> Message Sent <span
-											class="pull-right text-muted small"> 20 minutes ago</span>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-									<div>
-										<i class="icon-tasks"></i> New Task <span
-											class="pull-right text-muted small"> 1 Hour ago</span>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a href="#">
-									<div>
-										<i class="icon-upload"></i> Server Rebooted <span
-											class="pull-right text-muted small"> 2 Hour ago</span>
-									</div>
-							</a></li>
-							<li class="divider"></li>
-							<li><a class="text-center" href="#"> <strong>See
-										All Alerts</strong> <i class="icon-angle-right"></i>
-							</a></li>
-						</ul></li>
-					<!-- END ALERTS SECTION -->
 
 					<!--ADMIN SETTINGS SECTIONS -->
 
@@ -297,36 +175,7 @@
 
 
 
-				<li class="panel "><a href="#" data-parent="#menu"
-					data-toggle="collapse" class="accordion-toggle"
-					data-target="#component-nav"> <i class="icon-tasks"> </i> UI
-						Elements <span class="pull-right"> <i
-							class="icon-angle-left"></i>
-					</span> &nbsp; <span class="label label-default">10</span>&nbsp;
-				</a>
-					<ul class="collapse" id="component-nav">
 
-						<li class=""><a href="button.html"><i
-								class="icon-angle-right"></i> Buttons </a></li>
-						<li class=""><a href="icon.html"><i
-								class="icon-angle-right"></i> Icons </a></li>
-						<li class=""><a href="progress.html"><i
-								class="icon-angle-right"></i> Progress </a></li>
-						<li class=""><a href="tabs_panels.html"><i
-								class="icon-angle-right"></i> Tabs & Panels </a></li>
-						<li class=""><a href="notifications.html"><i
-								class="icon-angle-right"></i> Notification </a></li>
-						<li class=""><a href="more_notifications.html"><i
-								class="icon-angle-right"></i> More Notification </a></li>
-						<li class=""><a href="modals.html"><i
-								class="icon-angle-right"></i> Modals </a></li>
-						<li class=""><a href="wizard.html"><i
-								class="icon-angle-right"></i> Wizard </a></li>
-						<li class=""><a href="sliders.html"><i
-								class="icon-angle-right"></i> Sliders </a></li>
-						<li class=""><a href="typography.html"><i
-								class="icon-angle-right"></i> Typography </a></li>
-					</ul></li>
 				<li class="panel "><a href="#" data-parent="#menu"
 					data-toggle="collapse" class="accordion-toggle collapsed"
 					data-target="#form-nav"> <i class="icon-pencil"></i> Forms <span
@@ -387,103 +236,7 @@
 								class="icon-angle-right"></i> other Charts </a></li>
 					</ul></li>
 
-				<li class="panel"><a href="#" data-parent="#menu"
-					data-toggle="collapse" class="accordion-toggle"
-					data-target="#DDL-nav"> <i class=" icon-sitemap"></i> 3 Level
-						Menu <span class="pull-right"> <i class="icon-angle-left"></i>
-					</span>
-				</a>
-					<ul class="collapse" id="DDL-nav">
-						<li><a href="#" data-parent="#DDL-nav" data-toggle="collapse"
-							class="accordion-toggle" data-target="#DDL1-nav"> <i
-								class="icon-sitemap"></i>&nbsp; Demo Link 1 <span
-								class="pull-right" style="margin-right: 20px;"> <i
-									class="icon-angle-left"></i>
-							</span>
 
-
-						</a>
-							<ul class="collapse" id="DDL1-nav">
-								<li><a href="#"><i class="icon-angle-right"></i> Demo
-										Link 1 </a></li>
-								<li><a href="#"><i class="icon-angle-right"></i> Demo
-										Link 2 </a></li>
-								<li><a href="#"><i class="icon-angle-right"></i> Demo
-										Link 3 </a></li>
-
-							</ul></li>
-						<li><a href="#"><i class="icon-angle-right"></i> Demo
-								Link 2 </a></li>
-						<li><a href="#"><i class="icon-angle-right"></i> Demo
-								Link 3 </a></li>
-						<li><a href="#"><i class="icon-angle-right"></i> Demo
-								Link 4 </a></li>
-					</ul></li>
-				<li class="panel"><a href="#" data-parent="#menu"
-					data-toggle="collapse" class="accordion-toggle"
-					data-target="#DDL4-nav"> <i class=" icon-folder-open-alt"></i>
-						4 Level Menu <span class="pull-right"> <i
-							class="icon-angle-left"></i>
-					</span>
-				</a>
-					<ul class="collapse" id="DDL4-nav">
-						<li><a href="#" data-parent="DDL4-nav" data-toggle="collapse"
-							class="accordion-toggle" data-target="#DDL4_1-nav"> <i
-								class="icon-sitemap"></i>&nbsp; Demo Link 1 <span
-								class="pull-right" style="margin-right: 20px;"> <i
-									class="icon-angle-left"></i>
-							</span>
-
-
-						</a>
-							<ul class="collapse" id="DDL4_1-nav">
-								<li><a href="#" data-parent="#DDL4_1-nav"
-									data-toggle="collapse" class="accordion-toggle"
-									data-target="#DDL4_2-nav"> <i class="icon-sitemap"></i>&nbsp;
-										Demo Link 1 <span class="pull-right"
-										style="margin-right: 20px;"> <i class="icon-angle-left"></i>
-									</span>
-								</a>
-									<ul class="collapse" id="DDL4_2-nav">
-
-
-
-										<li><a href="#"><i class="icon-angle-right"></i> Demo
-												Link 1 </a></li>
-										<li><a href="#"><i class="icon-angle-right"></i> Demo
-												Link 2 </a></li>
-									</ul></li>
-								<li><a href="#"><i class="icon-angle-right"></i> Demo
-										Link 2 </a></li>
-								<li><a href="#"><i class="icon-angle-right"></i> Demo
-										Link 3 </a></li>
-							</ul></li>
-						<li><a href="#"><i class="icon-angle-right"></i> Demo
-								Link 2 </a></li>
-						<li><a href="#"><i class="icon-angle-right"></i> Demo
-								Link 3 </a></li>
-						<li><a href="#"><i class="icon-angle-right"></i> Demo
-								Link 4 </a></li>
-					</ul></li>
-				<li class="panel"><a href="#" data-parent="#menu"
-					data-toggle="collapse" class="accordion-toggle"
-					data-target="#error-nav"> <i class="icon-warning-sign"></i>
-						Error Pages <span class="pull-right"> <i
-							class="icon-angle-left"></i>
-					</span> &nbsp; <span class="label label-warning">5</span>&nbsp;
-				</a>
-					<ul class="collapse" id="error-nav">
-						<li><a href="errors_403.html"><i class="icon-angle-right"></i>
-								Error 403 </a></li>
-						<li><a href="errors_404.html"><i class="icon-angle-right"></i>
-								Error 404 </a></li>
-						<li><a href="errors_405.html"><i class="icon-angle-right"></i>
-								Error 405 </a></li>
-						<li><a href="errors_500.html"><i class="icon-angle-right"></i>
-								Error 500 </a></li>
-						<li><a href="errors_503.html"><i class="icon-angle-right"></i>
-								Error 503 </a></li>
-					</ul></li>
 
 
 				<li><a href="gallery.html"><i class="icon-film"></i> Image
@@ -494,20 +247,7 @@
 						Maps </a></li>
 
 				<li><a href="grid.html"><i class="icon-columns"></i> Grid </a></li>
-				<li class="panel"><a href="#" data-parent="#menu"
-					data-toggle="collapse" class="accordion-toggle"
-					data-target="#blank-nav"> <i class="icon-check-empty"></i>
-						Blank Pages <span class="pull-right"> <i
-							class="icon-angle-left"></i>
-					</span> &nbsp; <span class="label label-success">2</span>&nbsp;
-				</a>
-					<ul class="collapse" id="blank-nav">
 
-						<li><a href="blank.html"><i class="icon-angle-right"></i>
-								Blank Page One </a></li>
-						<li><a href="blank2.html"><i class="icon-angle-right"></i>
-								Blank Page Two </a></li>
-					</ul></li>
 				<li><a href="login.html"><i class="icon-signin"></i> Login
 						Page </a></li>
 
@@ -533,22 +273,16 @@
 					<div class="col-lg-12">
 						<div style="text-align: center;">
 
-							<a class="quick-btn" href="#"> <i class="icon-check icon-2x"></i>
-								<span> Products</span> <span class="label label-danger">2</span>
+							<a class="quick-btn" href="#	"> <i class="icon-check icon-2x"></i>
+								<span> News</span>
+							</a> <a class="quick-btn" href="/News/addCat.jsp"> <i
+								class="icon-envelope icon-2x"></i> <span>Add Cat</span>
 							</a> <a class="quick-btn" href="#"> <i
-								class="icon-envelope icon-2x"></i> <span>Messages</span> <span
-								class="label label-success">456</span>
+								class="icon-signal icon-2x"></i> <span>User</span> 
 							</a> <a class="quick-btn" href="#"> <i
-								class="icon-signal icon-2x"></i> <span>Profit</span> <span
-								class="label label-warning">+25</span>
-							</a> <a class="quick-btn" href="#"> <i
-								class="icon-external-link icon-2x"></i> <span>value</span> <span
-								class="label btn-metis-2">3.14159265</span>
-							</a> <a class="quick-btn" href="#"> <i class="icon-lemon icon-2x"></i>
-								<span>tasks</span> <span class="label btn-metis-4">107</span>
-							</a> <a class="quick-btn" href="#"> <i class="icon-bolt icon-2x"></i>
-								<span>Tickets</span> <span class="label label-default">20</span>
+								class="icon-external-link icon-2x"></i> <span>List</span>
 							</a>
+
 
 						</div>
 
@@ -562,7 +296,7 @@
 				<div class="row">
 					<div class="box">
 						<div class="panel panel-default">
-							<div class="panel-heading h1 text-center">Category</div>
+							<div class="panel-heading text-center">Category</div>
 							<div class="panel-body">
 								<div class="table-responsive">
 									<table class="table">
@@ -578,16 +312,18 @@
 													<td><c:out value="${row.category_id}" /></td>
 													<td><c:out value="${row.category_name}" /></td>
 													<td><a class="btn btn-danger"
-														href="<%= request.getContextPath()%>/editCat?id=<c:out value="${row.id}"/>">edit
+														href="<%= request.getContextPath()%>/editCat?id=<c:out value="${row.category_id}"/>">edit
 															<span class="glyphicon glyphicon-pencil"></span>
 
 													</a> <a class="btn btn-danger"
-														href="<%= request.getContextPath()%>/deleteCat?id=<c:out value="${row.id}"/>">delete 
-														<span class="glyphicon glyphicon-remove"></span>
+														href="<%= request.getContextPath()%>/deleteCat?id=<c:out value="${row.category_id}"/>">delete
+															<span class="glyphicon glyphicon-remove"></span>
 													</a></td>
 												</tr>
 											</c:forEach>
 										</tbody>
+										<a href="/News/addCat.jsp" class="btn btn-warning"
+											style="margin: 10px"> add</a>
 									</table>
 								</div>
 							</div>
